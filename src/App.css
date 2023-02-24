@@ -11,3 +11,43 @@
   padding: 5px 10px;
   cursor: pointer;
 }
+
+.main {
+  background-color: grey;
+  height: 98vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile+label {
+  font-size: 1.25em;
+  font-weight: 500;
+  padding: 10px 50px;
+  border-radius: 5px;
+  color: black;
+  background-color: white;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.popup {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.popup :nth-child(1){
+  font-weight: 700;
+}
