@@ -1,14 +1,24 @@
 .leaflet-container {
   margin: 20px;
-  height: 90vh;
+  height: 85vh;
   background: grey;
 }
 
-.repick-image {
+.control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: wheat;
+  padding: 10px 20px;
+  background-color: black;
   position: absolute;
-  font-size: 20px;
   bottom: 0;
-  padding: 5px 10px;
+}
+
+.repick-image {
+  margin-top: 20px;
+  font-size: 15px;
+  padding: 5px;
   cursor: pointer;
 }
 
@@ -48,6 +58,50 @@
   gap: 10px;
 }
 
-.popup :nth-child(1){
+.popup :nth-child(1) {
   font-weight: 700;
+}
+
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+
+.nav-item {
+  cursor: pointer;
+  list-style: none;
+  color: inherit !important;
+  background-color: grey;
+  padding: 5px 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.contaienr {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card {
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+  color: white;
+
+  background-color: grey;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }

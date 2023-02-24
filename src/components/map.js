@@ -4,9 +4,9 @@ import { EditControl } from 'react-leaflet-draw'
 import 'leaflet-draw/dist/leaflet.draw.css'
 import L from 'leaflet'
 
-export default function Map({ picture = "./assets/image.PNG", setPicture }) {
+export default function Map({ picture, setPicture, layersInfo, setLayersInfo }) {
     var bounds = [[100, 0], [0, 100]];
-    const [layersInfo, setLayersInfo] = useState([])
+
     const [showMarker, setShowMarker] = useState(false)
     const emptyLayer = {
         id: '',
@@ -57,6 +57,7 @@ export default function Map({ picture = "./assets/image.PNG", setPicture }) {
             crs={L.CRS.Simple}
             bounds={bounds}
         >
+
             <ImageOverlay
                 url={picture}
                 bounds={[[100, 0], [0, 125],]}
@@ -76,6 +77,7 @@ export default function Map({ picture = "./assets/image.PNG", setPicture }) {
                         marker: false
                     }}
                 />
+
                 {showMarker &&
                     <Marker ref={markerRef}
                         position={[currentLayer.x, currentLayer.y]}
@@ -112,9 +114,16 @@ export default function Map({ picture = "./assets/image.PNG", setPicture }) {
                 ))
             }
 
-            <button className='repick-image' onClick={() => setPicture(false)}>
-                Pick another image
-            </button>
+            <div className='control'>
+                <div>
+                    <h2>How to use:</h2>
+                    <p> 1- Draw  a shape on the map </p>
+                    <p> 2- Click on the marker and enter the name of the aria </p>
+                </div>
+                <button className='repick-image' onClick={() => setPicture(false)}>
+                    Pick another image
+                </button>
+            </div>
         </MapContainer>
     )
 }
