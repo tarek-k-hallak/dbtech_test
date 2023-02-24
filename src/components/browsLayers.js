@@ -3,7 +3,7 @@ import React from 'react'
 export default function BrowsLayers({ layersInfo }) {
     return (
         <main>
-            {layersInfo == "" ?
+            {layersInfo === "" ?
                 <div>Ther is No data right now,</div>
                 :
                 <div className='contaienr'>
