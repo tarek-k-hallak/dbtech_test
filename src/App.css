@@ -96,11 +96,10 @@ main {
 }
 
 .card {
-  width: 70%;
+  width: 50%;
   margin: auto;
   padding: 20px;
   color: white;
-
   background-color: grey;
   margin-bottom: 10px;
   border-radius: 5px;
